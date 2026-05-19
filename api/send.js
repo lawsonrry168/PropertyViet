@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
     // 調用 Resend 發信
     const { data, error } = await resend.emails.send({
-      from: 'PropertyViet <info@propertyviet.com>', // 需先在 Resend 綁定網域，測試可用 onboarding@resend.dev
+      from: 'onboarding@resend.dev>', // 需先在 Resend 綁定網域，測試可用 onboarding@resend.dev
       to: [email],
       subject: '【PropertyViet】您申請的《越南買樓避坑清單 .PDF》已送達！',
       html: `<strong>感謝訂閱！</strong><p>請點擊此處下載您的 PDF 避坑清單。</p>`,
