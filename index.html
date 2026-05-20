@@ -358,7 +358,7 @@
             <span style="font-size: 0.95rem; color: var(--text-muted); display: block; margin-top: 10px;">—— 借別人的血淚，鋪你的避坑之路。</span>
         </div>
 
-        <!-- 串聯 Vercel 後端 API 的 Resend 索取表單 -->
+        <!-- 索取表單 -->
         <div class="header-form-box">
             <h3>🔥 限時免費索取 <span>《越南買樓避坑清單 .PDF》</span></h3>
             <form id="leadForm" onsubmit="submitLeadForm(event)">
@@ -433,11 +433,11 @@
             </div>
         </section>
 
-        <!-- Facebook 專頁追蹤組合 -->
+        <!-- Facebook 專頁追蹤組合 (已更新最新專頁網址) -->
         <section class="fb-section">
             <h2>不想交幾百萬學費？</h2>
             <p>即刻加入我們的香港業主社群，隨時獲取最新的越南房產雷區爆料與真實個案！</p>
-            <a href="https://www.facebook.com/profile.php?id=61577284168814" target="_blank" class="btn-fb">
+            <a href="https://www.facebook.com/people/%E9%A6%99%E6%B8%AF%E4%BA%BA%E8%B6%8A%E5%8D%97%E8%B2%B7%E6%A8%93%E8%A1%80%E6%B7%9A%E5%8F%B2/61589795924568/" target="_blank" class="btn-fb">
                 <i class="fab fa-facebook-f"></i> 追蹤我們的 Facebook 專頁
             </a>
         </section>
@@ -449,7 +449,7 @@
         <p>© 2026 PropertyViet. All Rights Reserved.</p>
     </footer>
 
-    <!-- 💡 新增：自動化發信的 JavaScript 邏輯 -->
+    <!-- JavaScript 發信處理 -->
     <script>
         async function submitLeadForm(event) {
             event.preventDefault(); // 阻擋表單傳統跳轉
@@ -465,8 +465,8 @@
             submitBtn.innerText = '正在發送...';
 
             try {
-                // 2. 呼叫我們放在 /api/send.js (或 send-email.js) 的後端路由
-                // 如果你的後端檔名是 send-email.js，請把路徑改成 '/api/send-email'
+                // 2. 呼叫 Vercel 的後端發信路由 /api/send
+                // (如果你的後端檔名是 send-email.js，請將此處改為 '/api/send-email')
                 const response = await fetch('/api/send', {
                     method: 'POST',
                     headers: {
@@ -488,7 +488,7 @@
                 }
 
             } catch (error) {
-                // 網絡或系統崩潰錯誤
+                // 網絡或系統連線錯誤
                 console.error('Network Error:', error);
                 alert('❌ 系統連線失敗，請檢查網路或稍後再試。');
             } finally {
