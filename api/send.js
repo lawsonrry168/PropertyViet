@@ -19,7 +19,7 @@ export default async function handler(req, res) {
         'Authorization': 'Bearer re_amyZsQYG_CEHehrZseU91KtB3nCbwVvoe'
       },
       body: JSON.stringify({
-        from: 'PropertyViet <info@book.propertyviet.com>', // 沒改 DNS 必須用這個
+        from: 'PropertyViet <lawsonrry168@gmail.com>', // 沒改 DNS 必須用這個
         to: [email], // 沒改 DNS，這裡必須填你註冊 Resend 的 Email 才能成功測試
         subject: '【PropertyViet】您申請的《越南買樓避坑清單 .PDF》已送達！',
         html: `
