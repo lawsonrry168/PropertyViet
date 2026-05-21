@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
+    <meta name="msvalidate.01" content="71FFD36DC88BA1643115E030AF215655" />
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R6W4VPTS19"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -9,6 +11,7 @@
 
       gtag('config', 'G-R6W4VPTS19');
     </script>
+    
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -392,6 +395,53 @@
             cursor: not-allowed;
         }
 
+        /* 🟢 底部跨網域引流橋樑樣式 */
+        .main-bridge-section {
+            background: linear-gradient(135deg, #1E1E1E 0%, #000000 100%);
+            border: 1px solid #333;
+            border-top: 4px solid var(--danger-red);
+            padding: 3.5rem 1.5rem;
+            text-align: center;
+            margin-top: 4rem;
+            border-radius: 6px;
+        }
+
+        .main-bridge-section h2 {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .main-bridge-section p {
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 2rem auto;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .btn-bridge {
+            display: inline-block;
+            background-color: transparent;
+            border: 2px solid var(--primary-yellow);
+            color: var(--primary-yellow);
+            text-decoration: none;
+            padding: 14px 40px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
+        }
+
+        .btn-bridge:hover {
+            background-color: var(--primary-yellow);
+            color: #000;
+            box-shadow: 0 6px 25px rgba(255, 215, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
         /* 頁尾 */
         footer {
             background-color: #0b0b0b;
@@ -401,6 +451,61 @@
             color: #555;
             border-top: 1px solid #222;
             margin-top: 4rem;
+        }
+
+        /* 🟢 成功提示引流彈窗樣式 */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-box {
+            background: #1E1E1E;
+            border: 2px solid var(--primary-yellow);
+            max-width: 500px;
+            width: 90%;
+            padding: 2.5rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .modal-box h3 {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-tip-box {
+            background: #121212;
+            border-left: 4px solid var(--danger-red);
+            padding: 12px;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .btn-modal-go {
+            display: block;
+            background: var(--primary-yellow);
+            color: #000;
+            text-decoration: none;
+            padding: 14px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .btn-modal-go:hover {
+            background-color: #e6c200;
         }
     </style>
 </head>
@@ -498,6 +603,44 @@
             </a>
         </section>
 
+        <section class="main-bridge-section">
+            <h2>知道了雷區，然後呢？</h2>
+            <p>
+                不看 3D 圖、算清隱形成本、拋棄香港思維 —— 這些都只是防守。<br>
+                想要在越南房地產市場真正安全進場，你需要的是經過本地法規審查的數據與真實的合規渠道對接。
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 15px; justify-content: center; align-items: center;">
+                <a href="https://propertyviet.com/?utm_source=book_landing&utm_medium=bottom_bridge" 
+                   target="_blank"
+                   class="btn-bridge">
+                   進入 PropertyViet 官方主站：尋求合規安全方案 ➔
+                </a>
+                <span style="color: #555; font-size: 0.85rem;">※ 點擊將跳轉至 PropertyViet 官方主頁，了解符合外籍人士規範的最新盤點。</span>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="bridgeModal" class="modal-overlay">
+        <div class="modal-box">
+            <div style="font-size:3rem; margin-bottom:1rem;">🎉</div>
+            <h3>避坑指南已成功發送到您的信箱！</h3>
+            <p style="color:#A0A0A0; font-size:0.95rem; margin-bottom:1.5rem; line-height:1.6;">
+                請前往您的信箱收信（若未收到，請檢查垃圾郵件匣）。
+            </p>
+            
+            <div class="modal-tip-box">
+                <p style="color:#E0E0E0; font-size:0.9rem; margin:0; line-height:1.6;">
+                    📢 <strong>接下來該怎麼做？</strong><br>
+                    看過血淚史，更要知道如何安全進場。歡迎瀏覽我們的官方主站，獲取經嚴格審查的越南安全項目與合規投資渠道。
+                </p>
+            </div>
+
+            <a href="https://propertyviet.com/?utm_source=book_landing&utm_medium=popup_success" 
+               class="btn-modal-go">
+               前往 PropertyViet 官方主站 ➔
+            </a>
+        </div>
     </div>
 
     <footer>
@@ -532,7 +675,7 @@
 
                 if (response.ok) {
                     // ==========================================
-                    // 🟢 核心變更：發信成功時，立即觸發 GA4 潛在客戶事件
+                    // 核心變更：發信成功時，立即觸發 GA4 潛在客戶事件
                     // ==========================================
                     if (typeof gtag === 'function') {
                         gtag('event', 'generate_lead', {
@@ -541,9 +684,9 @@
                         });
                     }
 
-                    // 3. 發送成功提示
-                    alert('🎉 避坑白皮書已成功發送！\n請前往您的信箱收信（若未收到，請檢查垃圾郵件匣）。');
+                    // 3. 🟢 升級：移除舊的 alert，改為顯示精美引流彈窗
                     emailInput.value = ''; // 清空輸入框
+                    document.getElementById('bridgeModal').style.display = 'flex';
                 } else {
                     // 後端返回錯誤
                     console.error('Resend API Error:', result.error);
@@ -558,6 +701,14 @@
                 // 4. 無論成功或失敗，都恢復按鈕可用狀態
                 submitBtn.disabled = false;
                 submitBtn.innerText = '立即索取';
+            }
+        }
+
+        // 點擊彈窗外部可以關閉彈窗（優化體驗）
+        window.onclick = function(event) {
+            const modal = document.getElementById('bridgeModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
             }
         }
     </script>
