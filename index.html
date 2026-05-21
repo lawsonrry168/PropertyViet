@@ -1,501 +1,190 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R6W4VPTS19"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-R6W4VPTS19');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PropertyViet - 香港人越南買樓血淚史</title>
-    <!-- 引入 Google Fonts -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- FontAwesome 圖標 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary-yellow: #FFD700;
-            --danger-red: #A31D1D;
-            --bg-dark: #121212;
-            --card-dark: #1E1E1E;
-            --text-light: #E0E0E0;
-            --text-muted: #A0A0A0;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Noto Sans HK', sans-serif;
         }
-
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* 頂部警示條 */
-        .warning-ticker {
-            background: repeating-linear-gradient(
-                45deg,
-                var(--primary-yellow),
-                var(--primary-yellow) 10px,
-                #000 10px,
-                #000 20px
-            );
-            height: 12px;
-            width: 100%;
-        }
-
-        /* Hero 區塊 */
-        header {
-            padding: 4rem 1.5rem 4rem 1.5rem;
-            text-align: center;
-            background: linear-gradient(180deg, rgba(18,18,18,0.8) 0%, rgba(18,18,18,1) 100%), 
-                        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070') no-repeat center/cover;
-            border-bottom: 2px solid var(--danger-red);
-        }
-
-        .logo-text {
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: #fff;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-
-        .logo-text span {
-            color: var(--primary-yellow);
-            background-color: #000;
-            padding: 0 10px;
-            display: inline-block;
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--danger-red);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-            background: rgba(0,0,0,0.6);
-            display: inline-block;
-            padding: 5px 15px;
-            border-left: 4px solid var(--danger-red);
-        }
-
-        .hero-quote {
-            max-width: 700px;
-            margin: 0 auto 2.5rem auto;
-            font-size: 1.2rem;
-            color: var(--text-light);
-            background: rgba(30, 30, 30, 0.8);
-            padding: 1.5rem;
-            border-radius: 4px;
-            border: 1px solid #333;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-
-        /* 頂部表單區塊 */
-        .header-form-box {
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 1.5rem;
-            border-radius: 6px;
-            border: 1px solid #444;
-        }
-
-        .header-form-box h3 {
-            font-size: 1.1rem;
-            color: #fff;
-            margin-bottom: 0.8rem;
-        }
-
-        .header-form-box h3 span {
-            color: var(--primary-yellow);
-        }
-
-        /* 社交平台按鈕區塊 */
-        .fb-section {
-            background-color: var(--card-dark);
-            border: 2px solid #222;
-            padding: 2.5rem 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .fb-section h2 {
-            font-size: 1.6rem;
-            color: #fff;
-            margin-bottom: 0.5rem;
-        }
-
-        .fb-section p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .btn-fb {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background-color: #1877F2;
-            color: white;
-            text-decoration: none;
-            padding: 14px 35px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
-        }
-
-        .btn-fb:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(24, 119, 242, 0.6);
-            background-color: #166FE5;
-        }
-
-        /* 主要內容區 */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-            color: #fff;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-yellow);
-            margin: 10px auto 0 auto;
-        }
-
-        /* 血淚故事牆 */
-        .story-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-bottom: 4rem;
-        }
-
-        @media(min-width: 768px) {
-            .story-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .story-card {
-            background-color: var(--card-dark);
-            border-top: 4px solid var(--danger-red);
-            padding: 1.5rem;
-            border-radius: 4px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.2s ease;
-        }
-
-        .story-card:hover {
-            transform: translateY(-3px);
-            border-top-color: var(--primary-yellow);
-        }
-
-        .story-tag {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #000;
-            background-color: var(--primary-yellow);
-            padding: 2px 8px;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .story-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
-            color: #fff;
-        }
-
-        .story-card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* 避坑三大守則 */
-        .rules-box {
-            background-color: #000;
-            border: 1px dashed var(--primary-yellow);
-            padding: 2rem;
-            border-radius: 4px;
-            margin-bottom: 4rem;
-        }
-
-        .rule-item {
+            font-family: 'Noto Sans HK', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #fcfcfc;
+            color: #333333;
             display: flex;
-            gap: 15px;
-            margin-bottom: 1.5rem;
-        }
-
-        .rule-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .rule-num {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--primary-yellow);
-            background: #222;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            flex-shrink: 0;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
         }
-
-        .rule-text h4 {
-            font-size: 1.1rem;
-            color: #fff;
-            margin-bottom: 0.3rem;
-        }
-
-        .rule-text p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* 表單元素樣式 */
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        @media(min-width: 576px) {
-            .form-group {
-                flex-direction: row;
-            }
-        }
-
-        input[type="email"] {
-            flex-grow: 1;
-            padding: 12px 15px;
-            border-radius: 4px;
-            border: 1px solid #444;
-            background-color: #111;
-            color: #fff;
-            font-size: 1rem;
-            outline: none;
-        }
-
-        input[type="email"]:focus {
-            border-color: var(--primary-yellow);
-        }
-
-        .btn-submit {
-            background-color: var(--primary-yellow);
-            color: #000;
-            border: none;
-            padding: 12px 25px;
-            font-weight: 700;
-            font-size: 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.2s ease;
-            white-space: nowrap;
-        }
-
-        .btn-submit:hover {
-            background-color: #e6c200;
-        }
-
-        .btn-submit:disabled {
-            background-color: #555;
-            color: #aaa;
-            cursor: not-allowed;
-        }
-
-        /* 頁尾 */
-        footer {
-            background-color: #0b0b0b;
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #eef0f2;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             text-align: center;
-            padding: 2rem 1.5rem;
-            font-size: 0.85rem;
-            color: #555;
-            border-top: 1px solid #222;
-            margin-top: 4rem;
+        }
+        .brand-bar {
+            background-color: #A31D1D;
+            height: 6px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 16px 16px 0 0;
+        }
+        .container { position: relative; }
+        h1 {
+            font-size: 24px;
+            color: #111111;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        p.subtitle {
+            font-size: 15px;
+            color: #666666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #444444;
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        input[type="email"]:focus {
+            border-color: #A31D1D;
+        }
+        button {
+            width: 100%;
+            background-color: #FFD700;
+            color: #000000;
+            border: none;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+            transition: all 0.2s;
+        }
+        button:hover {
+            background-color: #ffcc00;
+            transform: translateY(-1px);
+        }
+        button:disabled {
+            background-color: #e0e0e0;
+            color: #888888;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+        .footer-text {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #999999;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-    <!-- 頂部工安警示視覺線 -->
-    <div class="warning-ticker"></div>
-
-    <!-- Hero 區塊 -->
-    <header>
-        <h1 class="logo-text">Property<span>Viet</span></h1>
-        <p class="subtitle">香港人越南買樓血淚史</p>
-        
-        <div class="hero-quote">
-            「去越南買樓：本想賺錢，結果樓價跌足五年。」<br>
-            <span style="font-size: 0.95rem; color: var(--text-muted); display: block; margin-top: 10px;">—— 借別人的血淚，鋪你的避坑之路。</span>
-        </div>
-
-        <!-- 索取表單 -->
-        <div class="header-form-box">
-            <h3>🔥 限時免費索取 <span>《越南買樓避坑白皮書 .PDF》</span></h3>
-            <form id="leadForm" onsubmit="submitLeadForm(event)">
-                <div class="form-group">
-                    <input type="email" id="emailInput" placeholder="請輸入您的電郵地址" required>
-                    <button type="submit" id="submitBtn" class="btn-submit">立即索取</button>
-                </div>
-            </form>
-        </div>
-    </header>
-
     <div class="container">
-        
-        <!-- 核心故事 / 痛點區塊 -->
-        <section>
-            <h2 class="section-title">連地產經紀都不敢提的「真實中伏個案」</h2>
-            <div class="story-grid">
-                
-                <div class="story-card">
-                    <span class="story-tag">產權陷阱</span>
-                    <h3>「永久產權」還是「50年租約」？</h3>
-                    <p>拆解越南外籍人士專屬 SPA 合約的灰色地帶。交樓時才發現產權證（粉紅簿）無限期難產，到底卡在什麼地方？</p>
-                </div>
+        <div class="brand-bar"></div>
 
-                <div class="story-card">
-                    <span class="story-tag">爛尾危機</span>
-                    <h3>胡志明市某盤停工3年紀實</h3>
-                    <p>表面滿街起重機，背後資金鏈斷裂。香港業主聯署維權跨國打官司，最真實的海外維權日常，有苦說不出。</p>
-                </div>
+        <h1>免費索取《越南買樓避坑清單》</h1>
+        <p class="subtitle">凝聚多位香港業主血淚教訓，進場前必讀！<br>輸入電郵，系統將自動為您發送 PDF 指南。</p>
 
-                <div class="story-card">
-                    <span class="story-tag">資金回流</span>
-                    <h3>賺到匯不走？外匯管制大坑</h3>
-                    <p>以為放租好輕鬆？當地租金收入和未來轉售收益，如何合法合規匯回香港？一不小心就會變成「地下錢莊」的危險遊戲。</p>
-                </div>
-
-                <div class="story-card">
-                    <span class="story-tag">文化衝突</span>
-                    <h3>香港效率 vs 越南時間</h3>
-                    <p>收個租、搞個裝修等了足足三個月。當地代管公司的隱形收費與溝通斷層，親身示範什麼叫「貼錢買難受」。</p>
-                </div>
-
+        <form id="leadForm" onsubmit="submitLeadForm(event)">
+            <div class="form-group">
+                <label for="emailInput">電子信箱地址</label>
+                <input type="email" id="emailInput" placeholder="example@gmail.com" required>
             </div>
-        </section>
+            <button type="submit" id="submitBtn">立即免費索取 PDF</button>
+        </form>
 
-        <!-- 避坑三大手則 -->
-        <section class="rules-box">
-            <h2 class="section-title" style="margin-bottom: 1.5rem;">進場前，請先讀熟「保命三則」</h2>
-            
-            <div class="rule-item">
-                <div class="rule-num">1</div>
-                <div class="rule-text">
-                    <h4>不要看 3D 渲染圖買樓</h4>
-                    <p>地產中介的宣傳片拍得再美，都不及親自去河內、胡志明市的小巷走一遭。開發商的背景實力比什麼都重要。</p>
-                </div>
-            </div>
-
-            <div class="rule-item">
-                <div class="rule-num">2</div>
-                <div class="rule-text">
-                    <h4>算清「隱形成本」與「真回報」</h4>
-                    <p>扣除當地的代管費、物業稅、預扣租金所得稅，以及跨國匯款手續費後，當初承諾的 7% 回報可能只剩不到一半。</p>
-                </div>
-            </div>
-
-            <div class="rule-item">
-                <div class="rule-num">3</div>
-                <div class="rule-text">
-                    <h4>別把香港的法律思維套在越南</h4>
-                    <p>兩地的土地法、外籍人士置業限制完全是兩個世界。任何經紀口頭承諾的「遲點會幫你搞定」，在法律文件前都形同廢紙。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Facebook 專頁追蹤組合 (已更新最新專頁網址) -->
-        <section class="fb-section">
-            <h2>不想交幾百萬學費？</h2>
-            <p>即刻加入我們的香港業主社群，隨時獲取最新的越南房產雷區爆料與真實個案！</p>
-            <a href="https://www.facebook.com/people/%E9%A6%99%E6%B8%AF%E4%BA%BA%E8%B6%8A%E5%8D%97%E8%B2%B7%E6%A8%93%E8%A1%80%E6%B7%9A%E5%8F%B2/61589795924568/" target="_blank" class="btn-fb">
-                <i class="fab fa-facebook-f"></i> 追蹤我們的 Facebook 專頁
-            </a>
-        </section>
-
+        <p class="footer-text">我們承諾保護您的隱私，您可以隨時取消訂閱。<br>本郵件內容僅供參考，不構成任何投資建議。</p>
     </div>
 
-    <!-- 頁尾 -->
-    <footer>
-        <p>© 2026 PropertyViet. All Rights Reserved.</p>
-    </footer>
-
-    <!-- JavaScript 發信處理 -->
     <script>
-        async function submitLeadForm(event) {
-            event.preventDefault(); // 阻擋表單傳統跳轉
+    async function submitLeadForm(event) {
+        event.preventDefault(); // 阻止網頁刷新的預設行為
 
-            const emailInput = document.getElementById('emailInput');
-            const submitBtn = document.getElementById('submitBtn');
-            const emailValue = emailInput.value.trim();
+        const emailInput = document.getElementById('emailInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const emailValue = emailInput.value.trim();
 
-            if (!emailValue) return;
+        if (!emailValue) return;
 
-            // 1. 進入發送中狀態，防止用戶重複點擊
-            submitBtn.disabled = true;
-            submitBtn.innerText = '正在發送...';
+        // 鎖定按鈕，防止用戶重複點擊導致多次發信
+        submitBtn.disabled = true;
+        submitBtn.innerText = '正在處理並發送郵件...';
 
-            try {
-                // 2. 呼叫 Vercel 的後端發信路由 /api/send
-                // (如果你的後端檔名是 send-email.js，請將此處改為 '/api/send-email')
-                const response = await fetch('/api/send', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ email: emailValue })
-                });
+        try {
+            // 呼叫 Vercel 自動生成的後端接口 /api/send
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: emailValue })
+            });
 
-                const result = await response.json();
+            const result = await response.json();
 
-                if (response.ok) {
-                    // 3. 發送成功提示
-                    alert('🎉 避坑指南已成功發送！\n請前往您的信箱收信（若未收到，請檢查垃圾郵件匣）。');
-                    emailInput.value = ''; // 清空輸入框
-                } else {
-                    // 後端返回錯誤
-                    console.error('Resend API Error:', result.error);
-                    alert('❌ 發送失敗：' + (result.error?.message || '系統無回應，請稍後再試。'));
-                }
-
-            } catch (error) {
-                // 網絡或系統連線錯誤
-                console.error('Network Error:', error);
-                alert('❌ 系統連線失敗，請檢查網路或稍後再試。');
-            } finally {
-                // 4. 無論成功或失敗，都恢復按鈕可用狀態
-                submitBtn.disabled = false;
-                submitBtn.innerText = '立即索取';
+            if (response.ok) {
+                // 發送成功提示
+                alert('🎉 索取成功！《越南買樓避坑清單 .PDF》已發送到您的信箱，請立刻查收（若沒看到，請檢查垃圾郵件匣）。');
+                emailInput.value = ''; // 清空輸入框
+            } else {
+                console.error('後端發送失敗:', result.error);
+                alert('❌ 發送失敗，請確保輸入了正確的電郵，或稍後再試。');
             }
+
+        } catch (error) {
+            console.error('網路連線錯誤:', error);
+            alert('❌ 系統連線失敗，請檢查網絡或稍後再試。');
+        } finally {
+            // 解鎖按鈕，恢復狀態
+            submitBtn.disabled = false;
+            submitBtn.innerText = '立即免費索取 PDF';
         }
+    }
     </script>
 
 </body>
