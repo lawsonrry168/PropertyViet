@@ -2,9 +2,23 @@
 
 User-agent: *
 Allow: /
-
-# 阻擋後端發信 API 路由，避免爬蟲誤觸或浪費額度
 Disallow: /api/
 
-# 網站地圖網址
+# 針對主流 AI 爬蟲特別宣告允許（確保它們不會因為預設安全性設定而繞過您的網站）
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# 網站地圖
 Sitemap: https://book.propertyviet.com/sitemap.xml
