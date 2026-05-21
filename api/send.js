@@ -22,7 +22,7 @@ export default async function handler(req, res) {
         // 🚨 這裡已經為你精準對齊成功驗證的 ebook 子網域！
         from: 'PropertyViet <info@ebook.propertyviet.com>', 
         to: [email], 
-        subject: '【PropertyViet】您申請的《越南買樓避坑清單 .PDF》已送達！',
+        subject: '【PropertyViet】您申請的《越南買樓避坑白皮書 .PDF》已送達！',
         html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="ltr" lang="en">
   <head>
@@ -44,11 +44,11 @@ export default async function handler(req, res) {
                     <div style="margin:0 auto;padding:30px 20px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;max-width:600px;border:1px solid #e0e0e0;border-radius:8px;background-color:#ffffff;color:#333333;line-height:1.6">
                       <div style="margin:0;padding:0;background-color:#A31D1D;height:6px;width:100%;margin-bottom:30px;border-radius:4px 4px 0 0"></div>
                       <h2 style="margin:0;padding:0;color:#111111;font-size:22px;font-weight:bold;margin-top:0;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid #eee">
-                        【下載連結】您申請的《越南買樓避坑清單 .PDF》已送達！
+                        【下載連結】您申請的《越南買樓避坑白皮書 .PDF》已送達！
                       </h2>
                       <p style="margin:0;padding:0;font-size:16px;margin-bottom:15px">你好：</p>
                       <p style="margin:0;padding:0;font-size:15px;margin-bottom:15px">
-                        感謝你索取這份指南。跨國置業往往充滿未知的法規與資金盲區，希望這份由多位香港業主血淚教訓凝聚而成的清單，能幫你省下寶貴的時間與跨國學費。
+                        感謝你索取這份白皮書。跨國置業往往充滿未知的法規與資金盲區，希望這份由多位香港業主血淚教訓凝聚而成的清單，能幫你省下寶貴的時間與跨國學費。
                       </p>
                       <div style="margin:20px 0;padding:15px;background-color:#f9f9f9;border-left:4px solid #FFD700;border-radius:0 4px 4px 0;font-style:italic;font-size:14.5px;color:#555555">
                         <p style="margin:0;padding:0">
@@ -60,7 +60,7 @@ export default async function handler(req, res) {
                       </p>
                       <div style="margin:35px 0;padding:0;text-align:center">
                         <p style="margin:0;padding:0">
-                          <a href="這裡放你的PDF真實下載連結" rel="noopener noreferrer nofollow" style="color:#000000;text-decoration:none;background-color:#FFD700;padding:14px 35px;font-weight:bold;font-size:16px;border-radius:4px;box-shadow:0 4px 10px rgba(0,0,0,0.1);display:inline-block" target="_blank">⬇️ 立即下載《越南買樓避坑清單.PDF》</a>
+                          <a href="https://drive.google.com/file/d/1eazIg_x37Y3do4oyQ9unHQhjPqXzIuzl/view?usp=drive_link" rel="noopener noreferrer nofollow" style="color:#000000;text-decoration:none;background-color:#FFD700;padding:14px 35px;font-weight:bold;font-size:16px;border-radius:4px;box-shadow:0 4px 10px rgba(0,0,0,0.1);display:inline-block" target="_blank">⬇️ 立即下載《越南買樓避坑清單.PDF》</a>
                         </p>
                       </div>
                       <hr style="width:100%;border:0;border-top:1px solid #eeeeee;margin:30px 0" />
