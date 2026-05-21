@@ -48,11 +48,11 @@ export default async function handler(req, res) {
                       </h2>
                       <p style="margin:0;padding:0;font-size:16px;margin-bottom:15px">你好：</p>
                       <p style="margin:0;padding:0;font-size:15px;margin-bottom:15px">
-                        感謝你索取這份白皮書。跨國置業往往充滿未知的法規與資金盲區，希望這份由多位香港業主血淚教訓凝聚而成的清單，能幫你省下寶貴的時間與跨國學費。
+                        感謝你索取這份白皮書。跨國置業往往充滿未知的法規與資金盲區，希望這份由多位香港業主血淚教訓凝聚而成的白皮書，能幫你省下寶貴的時間與跨國學費。
                       </p>
                       <div style="margin:20px 0;padding:15px;background-color:#f9f9f9;border-left:4px solid #FFD700;border-radius:0 4px 4px 0;font-style:italic;font-size:14.5px;color:#555555">
                         <p style="margin:0;padding:0">
-                          <em>「地產經紀往往只會放大投資回報，卻很少提及粉紅簿（產權證）的審批進度，或是轉售時外匯管制的資金大坑。進場前，請務必逐一對照清單核對。」</em>
+                          <em>「地產經紀往往只會放大投資回報，卻很少提及粉紅簿（產權證）的審批進度，或是轉售時外匯管制的資金大坑。進場前，請務必逐一對照白皮書核對。」</em>
                         </p>
                       </div>
                       <p style="margin:0;padding:0;font-size:15px;margin-bottom:30px">
@@ -60,7 +60,7 @@ export default async function handler(req, res) {
                       </p>
                       <div style="margin:35px 0;padding:0;text-align:center">
                         <p style="margin:0;padding:0">
-                          <a href="https://drive.google.com/file/d/1eazIg_x37Y3do4oyQ9unHQhjPqXzIuzl/view?usp=drive_link" rel="noopener noreferrer nofollow" style="color:#000000;text-decoration:none;background-color:#FFD700;padding:14px 35px;font-weight:bold;font-size:16px;border-radius:4px;box-shadow:0 4px 10px rgba(0,0,0,0.1);display:inline-block" target="_blank">⬇️ 立即下載《越南買樓避坑清單.PDF》</a>
+                          <a href="https://drive.google.com/file/d/1eazIg_x37Y3do4oyQ9unHQhjPqXzIuzl/view?usp=drive_link" rel="noopener noreferrer nofollow" style="color:#000000;text-decoration:none;background-color:#FFD700;padding:14px 35px;font-weight:bold;font-size:16px;border-radius:4px;box-shadow:0 4px 10px rgba(0,0,0,0.1);display:inline-block" target="_blank">⬇️ 立即下載《越南買樓避坑白皮書.PDF》</a>
                         </p>
                       </div>
                       <hr style="width:100%;border:0;border-top:1px solid #eeeeee;margin:30px 0" />
