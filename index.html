@@ -151,12 +151,12 @@
 
         if (!emailValue) return;
 
-        // 鎖定按鈕，防止用戶重複點擊導致多次發信
+        // 鎖定按鈕，防止用戶重複點擊
         submitBtn.disabled = true;
         submitBtn.innerText = '正在處理並發送郵件...';
 
         try {
-            // 呼叫 Vercel 自動生成的後端接口 /api/send
+            // 呼叫 Vercel 後端接口
             const response = await fetch('/api/send', {
                 method: 'POST',
                 headers: {
@@ -168,6 +168,14 @@
             const result = await response.json();
 
             if (response.ok) {
+                // 🟢 核心優化：當後端確認發信成功時，即時向 GA4 發送轉換數據
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'engagement',
+                        'event_label': 'PDF_Download_Form'
+                    });
+                }
+
                 // 發送成功提示
                 alert('🎉 索取成功！《越南買樓避坑清單 .PDF》已發送到您的信箱，請立刻查收（若沒看到，請檢查垃圾郵件匣）。');
                 emailInput.value = ''; // 清空輸入框
