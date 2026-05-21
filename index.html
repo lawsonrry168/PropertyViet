@@ -358,12 +358,13 @@
         <p class="subtitle">香港人越南買樓血淚史</p>
         
         <div class="hero-quote">
-            「去越南買樓：本想賺錢，結果樓價跌足五年。」<br>
+            「當初以為去越南買的是『東南亞深圳』的未來，<br>
+            結果買到的是一部長達五年的<strong>爆雷維權史</strong>。」<br>
             <span style="font-size: 0.95rem; color: var(--text-muted); display: block; margin-top: 10px;">—— 借別人的血淚，鋪你的避坑之路。</span>
         </div>
 
         <div class="header-form-box">
-            <h3>🔥 限時免費索取 <span>《越南買樓避坑白皮書 .PDF》</span></h3>
+            <h3>🔥 限時免費索取 <span>《越南買樓避坑清單 .PDF》</span></h3>
             <form id="leadForm" onsubmit="submitLeadForm(event)">
                 <div class="form-group">
                     <input type="email" id="emailInput" placeholder="請輸入您的電郵地址" required>
@@ -400,7 +401,7 @@
                 <div class="story-card">
                     <span class="story-tag">文化衝突</span>
                     <h3>香港效率 vs 越南時間</h3>
-                    <p>收個租、搞個裝修等了足足三個月。當地代管公司的隱形收費與溝通斷層，親身示範什麼叫「貼錢買難受」。</p>
+                    <p>收個租、搞個裝修等了足足三個月. 當地代管公司的隱形收費與溝通斷層，親身示範什麼叫「貼錢買難受」。</p>
                 </div>
 
             </div>
@@ -476,16 +477,16 @@
 
                 if (response.ok) {
                     // ==========================================
-                    // 🟢 3. 核心優化：發信成功時，即時向 GA4 發送轉換數據
+                    // 🟢 核心變更：發信成功時，立即觸發 GA4 潛在客戶事件
                     // ==========================================
                     if (typeof gtag === 'function') {
                         gtag('event', 'generate_lead', {
                             'event_category': 'engagement',
-                            'event_label': 'Dark_Style_Lead_Form'
+                            'event_label': 'Dark_Warning_Lead_Form'
                         });
                     }
 
-                    // 4. 發送成功提示
+                    // 3. 發送成功提示
                     alert('🎉 避坑指南已成功發送！\n請前往您的信箱收信（若未收到，請檢查垃圾郵件匣）。');
                     emailInput.value = ''; // 清空輸入框
                 } else {
@@ -499,7 +500,7 @@
                 console.error('Network Error:', error);
                 alert('❌ 系統連線失敗，請檢查網路或稍後再試。');
             } finally {
-                // 5. 無論成功或失敗，都恢復按鈕可用狀態
+                // 4. 無論成功或失敗，都恢復按鈕可用狀態
                 submitBtn.disabled = false;
                 submitBtn.innerText = '立即索取';
             }
