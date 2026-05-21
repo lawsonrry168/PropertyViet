@@ -1,0 +1,10 @@
+# https://book.propertyviet.com/ robots.txt
+
+User-agent: *
+Allow: /
+
+# 阻擋後端發信 API 路由，避免爬蟲誤觸或浪費額度
+Disallow: /api/
+
+# 網站地圖網址
+Sitemap: https://book.propertyviet.com/sitemap.xml
