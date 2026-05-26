@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PropertyViet - 香港人越南買樓血淚史</title>
-
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "wx04nm11ez");
-    </script>
-
     <meta name="msvalidate.01" content="71FFD36DC88BA1643115E030AF215655" />
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R6W4VPTS19"></script>
@@ -23,6 +14,16 @@
       gtag('config', 'G-R6W4VPTS19');
     </script>
     
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', function() {
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "wx04nm11ez");
+        });
+    </script>
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -30,7 +31,53 @@
       "name": "PropertyViet - 香港人越南買樓血淚史",
       "description": "拆解越南外籍人士專屬 SPA 合約的產權陷阱、粉紅簿難產、胡志明市爛尾樓盤危機及外匯管制資金回流大坑。專為香港業主與投資者提供的越南買樓避坑指南。",
       "url": "https://book.propertyviet.com/",
-      "inLanguage": "zh-HK"
+      "inLanguage": "zh-HK",
+      "about": [
+        {
+          "@type": "Place",
+          "name": "Vietnam",
+          "sameAs": "https://zh.wikipedia.org/wiki/越南"
+        },
+        {
+          "@type": "Place",
+          "name": "Hong Kong",
+          "sameAs": "https://zh.wikipedia.org/wiki/香港"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "香港海外置業投資者 / 越南房地產業主"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PropertyViet",
+        "url": "https://book.propertyviet.com/",
+        "logo": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070",
+        "sameAs": [
+          "https://www.facebook.com/people/%E9%A6%99%E6%B8%AF%E4%BA%BA%E8%B6%8A%E5%8D%97%E8%B2%B7%E6%A8%93%E8%A1%80%E6%B7%9A%E5%8F%B2/61589795924568/"
+        ]
+      },
+      "mainEntity": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "越南買樓的外籍人士產權有何限制？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "外籍人士專屬的 SPA 合約存在灰色地帶，產權證（粉紅簿）審批進度緩慢，可能面臨 50 年租約與永久產權的爭議。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "越南房產投資有哪些隱形成本與資金風險？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "包含當地的物業代管費、物業稅、預扣租金所得稅，以及最核心的外匯管制問題。轉售收益與租金如何合法匯回香港，若不注意容易誤觸外匯管制法律。"
+            }
+          }
+        ]
+      }
     }
     </script>
 
@@ -72,7 +119,8 @@
         header {
             padding: 4rem 1.5rem;
             text-align: center;
-            background: linear-gradient(180deg, rgba(18,18,18,0.8) 0%, rgba(18,18,18,1) 100%), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070') no-repeat center/cover;
+            background: linear-gradient(180deg, rgba(18,18,18,0.8) 0%, rgba(18,18,18,1) 100%), 
+                        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070') no-repeat center/cover;
             border-bottom: 2px solid var(--danger-red);
         }
 
@@ -113,6 +161,7 @@
             padding: 1.5rem;
             border-radius: 4px;
             border: 1px solid #333;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
         .header-form-box {
@@ -145,7 +194,17 @@
             font-weight: 700;
             margin-bottom: 2rem;
             text-align: center;
+            position: relative;
             color: #fff;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-yellow);
+            margin: 10px auto 0 auto;
         }
 
         .story-grid {
@@ -164,6 +223,13 @@
             border-top: 4px solid var(--danger-red);
             padding: 1.5rem;
             border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-3px);
+            border-top-color: var(--primary-yellow);
         }
 
         .story-tag {
@@ -172,6 +238,263 @@
             color: #000;
             background-color: var(--primary-yellow);
             padding: 2px 8px;
-            margin-bottom: 1rem;
+            text-transform: uppercase;
             display: inline-block;
+            margin-bottom: 1rem;
         }
+
+        .story-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; color: #fff; }
+        .story-card p { font-size: 0.95rem; color: var(--text-muted); }
+
+        .rules-box {
+            background-color: #000;
+            border: 1px dashed var(--primary-yellow);
+            padding: 2rem;
+            border-radius: 4px;
+            margin-bottom: 4rem;
+        }
+
+        .rule-item { display: flex; gap: 15px; margin-bottom: 1.5rem; }
+        .rule-item:last-child { margin-bottom: 0; }
+        
+        .rule-num {
+            font-size: 1.5rem; font-weight: 900; color: var(--primary-yellow); background: #222;
+            width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0;
+        }
+
+        .rule-text h4 { color: #fff; margin-bottom: 0.3rem; font-size: 1.1rem; }
+        .rule-text p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .fb-section {
+            background-color: var(--card-dark); border: 2px solid #222; padding: 2.5rem 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .fb-section h2 { font-size: 1.6rem; color: #fff; margin-bottom: 0.5rem; }
+        .fb-section p { color: var(--text-muted); font-size: 1rem; margin-bottom: 1.5rem; }
+
+        .btn-fb {
+            display: inline-flex; align-items: center; gap: 10px; background-color: #1877F2; color: white; text-decoration: none; padding: 14px 35px; font-weight: 700; font-size: 1.2rem; border-radius: 30px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
+        }
+        .btn-fb:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(24, 119, 242, 0.6); background-color: #166FE5; }
+
+        .form-group { display: flex; flex-direction: column; gap: 10px; }
+        @media(min-width: 576px) { .form-group { flex-direction: row; } }
+
+        input[type="email"] {
+            flex-grow: 1; padding: 12px 15px; border-radius: 4px; border: 1px solid #444; background-color: #111; color: #fff; font-size: 1rem; outline: none;
+        }
+        input[type="email"]:focus { border-color: var(--primary-yellow); }
+
+        .btn-submit {
+            background-color: var(--primary-yellow); color: #000; border: none; padding: 12px 25px; font-weight: 700; font-size: 1rem; border-radius: 4px; cursor: pointer; transition: background 0.2s ease; white-space: nowrap;
+        }
+        .btn-submit:hover { background-color: #e6c200; }
+        .btn-submit:disabled { background-color: #555; color: #aaa; cursor: not-allowed; }
+
+        .main-bridge-section {
+            background: linear-gradient(135deg, #1E1E1E 0%, #000000 100%); border: 1px solid #333; border-top: 4px solid var(--danger-red); padding: 3.5rem 1.5rem; text-align: center; margin-top: 4rem; border-radius: 6px;
+        }
+        .main-bridge-section h2 { color: #fff; font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; }
+        .main-bridge-section p { color: var(--text-muted); max-width: 650px; margin: 0 auto 2rem auto; font-size: 1.05rem; line-height: 1.7; }
+        
+        .btn-bridge {
+            display: inline-block; background-color: transparent; border: 2px solid var(--primary-yellow); color: var(--primary-yellow); text-decoration: none; padding: 14px 40px; font-weight: 700; font-size: 1.1rem; border-radius: 4px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
+        }
+        .btn-bridge:hover { background-color: var(--primary-yellow); color: #000; box-shadow: 0 6px 25px rgba(255, 215, 0, 0.3); transform: translateY(-2px); }
+
+        footer { background-color: #0b0b0b; text-align: center; padding: 2rem 1.5rem; font-size: 0.85rem; color: #555; border-top: 1px solid #222; margin-top: 4rem; }
+
+        .modal-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center;
+        }
+        .modal-box {
+            background: #1E1E1E; border: 2px solid var(--primary-yellow); max-width: 500px; width: 90%; padding: 2.5rem 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .modal-box h3 { color: #fff; font-size: 1.4rem; margin-bottom: 1rem; }
+        .modal-tip-box { background: #121212; border-left: 4px solid var(--danger-red); padding: 12px; margin-bottom: 2rem; text-align: left; }
+        
+        .btn-modal-go {
+            display: block; background: var(--primary-yellow); color: #000; text-decoration: none; padding: 14px; font-weight: bold; font-size: 1.1rem; border-radius: 4px; transition: background 0.2s;
+        }
+        .btn-modal-go:hover { background-color: #e6c200; }
+    </style>
+</head>
+<body>
+
+    <div class="warning-ticker"></div>
+
+    <header>
+        <h1 class="logo-text">Property<span>Viet</span></h1>
+        <p class="subtitle">香港人越南買樓血淚史</p>
+        
+        <div class="hero-quote">
+            「當初以為去越南買的是『東南亞深圳』的未來，<br>
+            結果買到的是一部長達五年的<strong>爆雷維權史</strong>。」<br>
+            <span style="font-size: 0.95rem; color: var(--text-muted); display: block; margin-top: 10px;">—— 借別人的血淚，鋪你的避坑之路。</span>
+        </div>
+
+        <div class="header-form-box">
+            <h3>🔥 限時免費索取 <span>《越南買樓避坑白皮書 .PDF》</span></h3>
+            <form id="leadForm" onsubmit="submitLeadForm(event)">
+                <div class="form-group">
+                    <input type="email" id="emailInput" placeholder="請輸入您的電郵地址" required>
+                    <button type="submit" id="submitBtn" class="btn-submit">立即索取</button>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h2 class="section-title">連地產經紀都不敢提的「真實中伏個案」</h2>
+            <div class="story-grid">
+                <div class="story-card">
+                    <span class="story-tag">產權陷阱</span>
+                    <h3>「永久產權」還是「50年租約」？</h3>
+                    <p>拆解越南外籍人士專屬 SPA 合約的灰色地帶。交樓時才發現產權證（粉紅簿）無限期難產，到底卡在什麼地方？</p>
+                </div>
+                <div class="story-card">
+                    <span class="story-tag">爛尾危機</span>
+                    <h3>胡志明市某盤停工3年紀實</h3>
+                    <p>表面滿街起重機，背後資金鏈斷裂。香港業主聯署維權跨國打官司，最真實的海外維權日常，有苦說不出。</p>
+                </div>
+                <div class="story-card">
+                    <span class="story-tag">資金回流</span>
+                    <h3>賺到匯不走？外匯管制大坑</h3>
+                    <p>以為放租好輕鬆？當地租金收入和未來轉售收益，如何合法合規匯回香港？一不小心就會變成「地下錢莊」的危險遊戲。</p>
+                </div>
+                <div class="story-card">
+                    <span class="story-tag">文化衝突</span>
+                    <h3>香港效率 vs 越南時間</h3>
+                    <p>收個租、搞個裝修等了足足三個月. 當地代管公司的隱形收費與溝通斷層，親身示範什麼叫「貼錢買難受」。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="rules-box">
+            <h2 class="section-title" style="margin-bottom: 1.5rem;">進場前，請先讀熟「保命三則」</h2>
+            <div class="rule-item">
+                <div class="rule-num">1</div>
+                <div class="rule-text">
+                    <h4>不要看 3D 渲染圖買樓</h4>
+                    <p>地產中介的宣傳片拍得再美，都不及親自去河內、胡志明市的小巷走一遭。開發商的背景實力比什麼都重要。</p>
+                </div>
+            </div>
+            <div class="rule-item">
+                <div class="rule-num">2</div>
+                <div class="rule-text">
+                    <h4>算清「隱形成本」與「真回報」</h4>
+                    <p>扣除當地的代管費、物業稅、預扣租金所得稅，以及跨國匯款手續費後，當初承諾的 7% 回報可能只剩不到一半。</p>
+                </div>
+            </div>
+            <div class="rule-item">
+                <div class="rule-num">3</div>
+                <div class="rule-text">
+                    <h4>別把香港的法律思維套在越南</h4>
+                    <p>兩地的土地法、外籍人士置業限制完全是兩個世界。任何經紀口頭承諾的「遲點會幫你搞定」，在法律文件前都形同廢紙。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fb-section">
+            <h2>不想交幾百萬學費？</h2>
+            <p>即刻加入我們的香港業主社群，隨時獲取最新的越南房產雷區爆料與真實個案！</p>
+            <a href="https://www.facebook.com/people/%E9%A6%99%E6%B8%AF%E4%BA%BA%E8%B6%8A%E5%8D%97%E8%B2%B7%E6%A8%93%E8%A1%80%E6%B7%9A%E5%8F%B2/61589795924568/" target="_blank" class="btn-fb">
+                <i class="fab fa-facebook-f"></i> 追蹤我們的 Facebook 專頁
+            </a>
+        </section>
+
+        <section class="main-bridge-section">
+            <h2>知道了雷區，然後呢？</h2>
+            <p>
+                不看 3D 圖、算清隱形成本、拋棄香港思維 —— 這些都只是防守。<br>
+                想要在越南房地產市場真正安全進場，你需要的是經過本地法規審查的數據與真實的合規渠道對接。
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 15px; justify-content: center; align-items: center;">
+                <a href="https://propertyviet.com/?utm_source=book_landing&utm_medium=bottom_bridge" target="_blank" class="btn-bridge">
+                    進入 PropertyViet 官方主站：尋求合規安全方案 ➔
+                </a>
+                <span style="color: #555; font-size: 0.85rem;">※ 點擊將跳轉至 PropertyViet 官方主頁，了解符合外籍人士規範的最新盤點。</span>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="bridgeModal" class="modal-overlay">
+        <div class="modal-box">
+            <div style="font-size:3rem; margin-bottom:1rem;">🎉</div>
+            <h3>避坑指南已成功發送到您的信箱！</h3>
+            <p style="color:#A0A0A0; font-size:0.95rem; margin-bottom:1.5rem; line-height:1.6;">
+                請前往您的信箱收信（若未收到，請檢查垃圾郵件匣）。
+            </p>
+            
+            <div class="modal-tip-box">
+                <p style="color:#E0E0E0; font-size:0.9rem; margin:0; line-height:1.6;">
+                    📢 <strong>接下來該怎麼做？</strong><br>
+                    看過血淚史，更要知道如何安全進場。歡迎瀏覽我們的官方主站，獲取經嚴格審查的越南安全項目與合規投資渠道。
+                </p>
+            </div>
+
+            <a href="https://propertyviet.com/?utm_source=book_landing&utm_medium=popup_success" class="btn-modal-go">
+               前往 PropertyViet 官方主站 ➔
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 PropertyViet. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        async function submitLeadForm(event) {
+            event.preventDefault(); 
+
+            const emailInput = document.getElementById('emailInput');
+            const submitBtn = document.getElementById('submitBtn');
+            const emailValue = emailInput.value.trim();
+
+            if (!emailValue) return;
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = '正在發送...';
+
+            try {
+                const response = await fetch('/api/send', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: emailValue })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'generate_lead', {
+                            'event_category': 'engagement',
+                            'event_label': 'Dark_Warning_Lead_Form'
+                        });
+                    }
+                    emailInput.value = ''; 
+                    document.getElementById('bridgeModal').style.display = 'flex';
+                } else {
+                    console.error('Resend API Error:', result.error);
+                    alert('❌ 發送失敗：' + (result.error?.message || '系統無回應，請稍後再試。'));
+                }
+            } catch (error) {
+                console.error('Network Error:', error);
+                alert('❌ 系統連線失敗，請檢查網路或稍後再試。');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = '立即索取';
+            }
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('bridgeModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
